@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (() => {
+        const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+        const theme =
+          param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <script>
+      (() => {
+        const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+        if (param === "light" || param === "dark") return;
+        document.documentElement.setAttribute("data-theme",
+          window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        try {
+          const saved = localStorage.getItem("nived-theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (error) {
+          console.warn("Theme preferences cannot be read in this browser.", error);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+DQogIDxzdHlsZT4NCiAgICA6cm9vdCB7IC0tY3AtYmc6ICNmN2Y0ZWY7IC0tY3AtdGV4dDogIzI0MjQyNDsgLS1jcC1hY2NlbnQ6ICNiMTFmNGI7IH0NCiAgICByZWN0IHsgZmlsbDogdmFyKC0tY3AtYmcpOyB9DQogICAgdGV4dCB7IGZpbGw6IHZhcigtLWNwLXRleHQpOyBmb250OiA3MDAgMzhweCAiU2Vnb2UgVUkiLCBzYW5zLXNlcmlmOyBsZXR0ZXItc3BhY2luZzogLTNweDsgfQ0KICAgIGNpcmNsZSB7IGZpbGw6IHZhcigtLWNwLWFjY2VudCk7IH0NCiAgPC9zdHlsZT4NCiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiLz4NCiAgPHRleHQgeD0iNiIgeT0iNDQiPm52PC90ZXh0Pg0KICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjQzIiByPSIzIi8+DQo8L3N2Zz4NCg==" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nived Velayudhan is a Solutions Engineer at Microsoft, helping enterprise teams take AI from pilot to production. Explore his work in agentic AI, GitHub Copilot, cloud architecture, and open source." />
+    <meta name="author" content="Nived Velayudhan" />
+    <link rel="canonical" href="https://nived15.github.io/nived-portfolio/" />
+    <meta name="theme-color" content="#f7f4ef" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nived15.github.io/nived-portfolio/" />
+    <meta property="og:title" content="Nived Velayudhan — From possibility to production." />
+    <meta property="og:description" content="Solutions Engineer at Microsoft. Enterprise AI, developer experience, cloud architecture, and a human-first approach to technology." />
+    <meta property="og:image" content="https://nived15.github.io/nived-portfolio/social-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nived Velayudhan, Solutions Engineer at Microsoft" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://nived15.github.io/nived-portfolio/social-preview.jpg" />
+    <title>Nived Velayudhan — AI, Cloud &amp; Real-World Impact</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nived Velayudhan",
+        "url": "https://nived15.github.io/nived-portfolio/",
+        "image": "https://nived15.github.io/nived-portfolio/social-preview.jpg",
+        "jobTitle": "Solutions Engineer, Cloud & AI",
+        "worksFor": { "@type": "Organization", "name": "Microsoft" },
+        "sameAs": ["https://www.linkedin.com/in/nivedv/"],
+        "knowsAbout": ["Agentic AI", "GitHub Copilot", "Cloud Architecture", "OpenShift", "DevOps"],
+        "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" }
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-DiI7mnKV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CHV3UT57.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This portfolio needs JavaScript for its interactive experience. You can also find Nived Velayudhan at <a href="https://www.linkedin.com/in/nivedv/">linkedin.com/in/nivedv</a>.</noscript>
+  </body>
+</html>
